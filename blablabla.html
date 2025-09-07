@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Иван Семериков — сайт-визитка</title>
+<meta name="description" content="Официальный сайт-визитка Ивана Семерикова. Фото, проекты и контакты.">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css"/>
+<style>
+/* --- General Reset --- */
+* {margin:0; padding:0; box-sizing:border-box;}
+body {font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu; color:#111827; background:#fff;}
+a {color:inherit; text-decoration:none;}
+.container {max-width:1200px; margin:0 auto; padding:0 20px;}
+.header{display:flex;justify-content:space-between;align-items:center;padding:28px 0;}
+.nav{display:flex;gap:28px;font-size:16px;color:#374151;font-weight:500;}
+.nav a{opacity:.9;transition:opacity .2s,color .2s;}
+.nav a:hover{color:#111827;opacity:1;}
+h1{font-size:56px; font-weight:800; line-height:1.02; margin:0;}
+h2{font-size:36px; margin-bottom:22px;}
+p{font-size:18px; color:#4b5563; line-height:1.5;}
+.section{padding:40px 0 28px;}
+.btn, .btn-primary, .btn-telegram {cursor:pointer; transition:transform .25s ease, box-shadow .25s ease;}
+.btn:hover, .btn-primary:hover, .btn-telegram:hover {transform:translateY(-2px); box-shadow:0 8px 20px rgba(0,0,0,.12);}
+.btn-primary {background:#2563eb; color:#fff; padding:12px 20px; border-radius:12px; font-weight:600; display:inline-flex; align-items:center; gap:8px; border:none;}
+.hero {display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:center; padding:40px 0 10px;}
+.hero .photo{width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:20px; box-shadow:0 8px 30px rgba(0,0,0,.12);}
+.status-row {display:flex; justify-content:center; align-items:center; gap:24px; flex-wrap:wrap; padding-bottom:6px;}
+.status-row img {height:200px; width:auto; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,.10); transition:transform .3s, box-shadow .3s;}
+.status-row img:hover {transform:scale(1.05); box-shadow:0 10px 24px rgba(0,0,0,.16);}
+.contact-card {background:#fff; border-radius:16px; padding:32px 40px; box-shadow:0 8px 24px rgba(0,0,0,.06); text-align:center; max-width:640px; margin:0 auto 48px;}
+.contact-card .btn-telegram {background:#2563eb; color:#fff; padding:14px 28px; border-radius:12px; font-weight:600; display:inline-block; box-shadow:0 2px 6px rgba(37,99,235,.3);}
+.contact-card .btn-telegram:hover {background:#1d4ed8; transform:translateY(-2px); box-shadow:0 6px 14px rgba(37,99,235,.35);}
+.contact-card .email {margin-top:16px; font-size:15px; color:#374151;}
+.contact-card .email a {color:#2563eb; text-decoration:none;}
+.contact-card .email a:hover {text-decoration:underline;}
+/* AOS initial opacity for animation */
+[data-aos] {opacity:0; transform:translateY(20px); transition:opacity .6s ease, transform .6s ease;}
+[data-aos].aos-animate {opacity:1; transform:translateY(0);}
+@media(max-width:768px){.hero{grid-template-columns:1fr; gap:24px;} .status-row img{height:140px;} h1{font-size:44px;} .swiper{height:300px;}}
+@media(max-width:480px){.status-row img{height:120px;} h1{font-size:36px;}}
+</style>
+</head>
+<body>
+
+<header class="header container" data-aos="fade-down">
+  <nav class="nav" data-aos="fade-right">
+    <a href="#companies">Компании</a>
+    <a href="#social">Общественная деятельность</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+  <div style="font-weight:800;font-size:18px;letter-spacing:.4px" data-aos="fade-left">
+    <a href="mailto:ivansemerikov@bk.ru" style="color:inherit;text-decoration:none;">ivansemerikov@bk.ru</a>
+  </div>
+</header>
+
+<section class="container hero">
+  <div>
+    <h1 data-aos="fade-down" data-aos-delay="100">Иван Семериков</h1>
+    <p data-aos="fade-up" data-aos-delay="300">Предприниматель, основатель IT‑компании «Центр управления бизнесом»</p>
+    <div class="hero-cta" data-aos="fade-up" data-aos-delay="500">
+      <a href="https://t.me/Ivan_Semerikov" target="_blank" class="btn btn-primary">✈️ Связаться</a>
+    </div>
+  </div>
+  <img class="photo" src="images/ivan.jpg" alt="Иван Семериков" data-aos="zoom-in" data-aos-delay="700">
+</section>
+
+<main class="container">
+<section id="companies" class="section" data-aos="fade-up">
+  <h2 data-aos="fade-right">Компании</h2>
+  <p style="margin:6px 0 14px;font-size:18px;" data-aos="fade-left">
+    <img src="images/logo_colored.png" alt="Центр управления бизнесом" style="height:38px; vertical-align:middle; margin-right:6px;">
+    <strong>Центр управления бизнесом</strong> — <a href="https://cub86.ru" target="_blank" style="text-decoration:underline">cub86.ru</a>. Официальный партнёр фирмы «1С» с 2006 года. Продажа, внедрение, обслуживание программ 1С. Входит в ТОП‑5 партнёров 1С по Тюменской области.
+  </p>
+  <p style="color:#4b5563; font-style:italic; margin:6px 0 14px; font-size:18px;" data-aos="fade-up" data-aos-delay="200">
+    Миссия: помогать организациям быстрее и эффективнее достигать целей, используя ИТ и продукты/услуги фирмы «1С».
+  </p>
+  <div style="margin-top:16px;font-weight:600" data-aos="fade-up">Статусы компании</div>
+  <div class="status-row" style="margin-top:10px" data-aos="fade-up" data-aos-delay="200">
+    <img src="images/status1.jpg" alt="Статус 1">
+    <img src="images/status2.png" alt="Статус 2">
+    <img src="images/status3.png" alt="Статус 3">
+  </div>
+</section>
+
+<section id="social" class="section" data-aos="fade-up">
+  <h2>Общественная деятельность</h2>
+  <div style="display:flex;align-items:center;gap:16px;margin-bottom:10px" data-aos="fade-right">
+    <img src="images/anomalia_logo.jpg" alt="Аномалия Тюмень" style="height:38px;border-radius:6px">
+    <div style="font-weight:600">Лидер города Тюмени предпринимательского сообщества «Аномалия»</div>
+  </div>
+  <section id="anomaly" class="section" data-aos="fade-up">
+    <div class="swiper anomaly-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/anomalia1.jpg" alt="Аномалия 1"></div>
+        <div class="swiper-slide"><img src="images/anomalia2.jpg" alt="Аномалия 2"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <div style="display:flex;align-items:center;gap:16px;margin-top:28px;margin-bottom:10px" data-aos="fade-right">
+    <div style="width:38px;height:38px;border-radius:6px;background:#111827;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700">ОР</div>
+    <div style="font-weight:600">Член «ОПОРА РОССИИ» в Тюмени</div>
+  </div>
+  <div class="status-row opora-photos" data-aos="fade-up" data-aos-delay="200">
+    <img src="images/opora1.jpg" alt="Опора 1">
+    <img src="images/opora2.jpg" alt="Опора 2">
+  </div>
+</section>
+
+<section id="contacts" class="section" data-aos="fade-up">
+  <h2>Контакты</h2>
+  <div class="contact-card" data-aos="zoom-in" data-aos-delay="200">
+    <p>Хотите вступить в сообщество в Тюмени?</p>
+    <a href="https://t.me/anomaly_grebenuk_bot?start=ambassador_5405060330" target="_blank" class="btn-telegram">✈️ Вступить</a>
+    <div class="email">
+      Или на почту: <a href="mailto:ivansemerikov@bk.ru">ivansemerikov@bk.ru</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({duration:800, once:true});
+
+new Swiper('.swiper', {
+  loop:true,
+  spaceBetween:16,
+  pagination:{el:'.swiper-pagination', clickable:true},
+  autoplay:{delay:2600, disableOnInteraction:false},
+});
+</script>
+</body>
+</html>
